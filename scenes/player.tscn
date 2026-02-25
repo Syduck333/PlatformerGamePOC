@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b5gexpi2klolc"]
+[gd_scene load_steps=9 format=3 uid="uid://b5gexpi2klolc"]
 
 [ext_resource type="Texture2D" uid="uid://wlmdo20vhb2x" path="res://Assets/sprites/knight.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cakw2yhxt3iq" path="res://scripts/player.gd" id="1_g2els"]
@@ -42,17 +42,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
 radius = 6.0
 
-[node name="Player" type="CharacterBody2D" unique_id=124895112]
+[node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=358938872]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"Idle"
 autoplay = "Idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286911751]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_fjrip")
