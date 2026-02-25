@@ -6,7 +6,7 @@
 [ext_resource type="Animation" uid="uid://dacpdkuan7duq" path="res://animations/move.res" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://divyi33p7kd6u" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://schvfd7ckf7d" path="res://scenes/killzone.tscn" id="6_p57ef"]
-[ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://5snwuvp1htkn" path="res://scenes/slime.tscn" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
