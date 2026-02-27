@@ -98,8 +98,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(11.6378, 13.3065)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -110,10 +110,10 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -12.5)
 scale = Vector2(1, 1.04167)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"Run"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.53211
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("CircleShape2D_fjrip")
+position = Vector2(-0.5, -12)
+scale = Vector2(0.773341, 1.35272)
+shape = SubResource("RectangleShape2D_g2els")
