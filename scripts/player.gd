@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 
 
-
+	var lastAnimDirection: String = "Forward"
 	var direction = Input.get_axis("playeroneleft", "playeroneright")
 	
 	
@@ -39,7 +39,8 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("Jump")
 
 	#play anims
-
+	if Input.is_action_just_pressed("attack"):
+		animated_sprite.play("Attack" + lastAnimDirection)
 
 	if direction:
 		velocity.x = direction * SPEED
