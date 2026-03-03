@@ -575,3 +575,5 @@ connected_scene = "game_2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceLevel"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_kvpfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
