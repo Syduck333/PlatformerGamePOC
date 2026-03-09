@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://54rj6dheew6"]
+
+[ext_resource type="Texture2D" uid="uid://dp71s613t8523" path="res://Assets/sprites/Screenshot_2026-03-03_133847-removebg-preview.png" id="1_sdgpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ypy"]
+size = Vector2(7, 13.7969)
+
+[node name="Bone" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -5)
+scale = Vector2(0.0435268, 0.0435022)
+texture = ExtResource("1_sdgpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_x2ypy")
