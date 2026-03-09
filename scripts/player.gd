@@ -18,10 +18,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("playeroneattack"):
 		is_attacking = true
 		animated_sprite.play("Attack_Kick")
-		var areas = kick_area.get_overlapping_areas()
+		var areas = kick_area.get_overlapping_bodies()
 		print(areas.size())
 		for area in areas:
-			if area is KillZone:
+			if area is Slime:
 				area.kill()
 	
 	# Handle jump.

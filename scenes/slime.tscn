@@ -1,8 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://5snwuvp1htkn"]
+[gd_scene load_steps=23 format=3 uid="uid://5snwuvp1htkn"]
 
 [ext_resource type="Script" uid="uid://bg53uhnjflh3b" path="res://scenes/slime.gd" id="1_n6pvg"]
 [ext_resource type="PackedScene" uid="uid://schvfd7ckf7d" path="res://scenes/killzone.tscn" id="2_n6pvg"]
 [ext_resource type="Texture2D" uid="uid://c78cqyqmupi1j" path="res://Assets/sprites/tooth walker sprite-Sheet.png" id="2_pjw23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6pvg"]
+size = Vector2(11, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8pv"]
 size = Vector2(9, 34)
@@ -104,7 +107,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fur4c")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 10.0
 }, {
@@ -132,8 +135,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Slime" type="Node2D"]
+[node name="Slime" type="CharacterBody2D"]
+collision_mask = 0
 script = ExtResource("1_n6pvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -2.5)
+shape = SubResource("RectangleShape2D_n6pvg")
+debug_color = Color(0.731595, 0.232511, 1, 0.42)
 
 [node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
 position = Vector2(2, -12)
@@ -145,7 +154,6 @@ shape = SubResource("RectangleShape2D_0l8pv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -12)
 sprite_frames = SubResource("SpriteFrames_v5wyi")
-animation = &"Death"
 autoplay = "default"
 
 [node name="RayCast right" type="RayCast2D" parent="."]
@@ -157,3 +165,5 @@ collision_mask = 5
 position = Vector2(6, 4)
 target_position = Vector2(-7, 0)
 collision_mask = 5
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="after_death"]
