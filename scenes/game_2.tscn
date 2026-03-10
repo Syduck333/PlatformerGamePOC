@@ -417,10 +417,31 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Killzone" parent="." instance=ExtResource("6_f674i")]
-position = Vector2(-109, 52)
+position = Vector2(-106, 82)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_wjphx")
+
+[node name="Coin" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(1039, -113)
+
+[node name="Coin2" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(1415, -220)
+
+[node name="Coin3" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(1554, -250)
+
+[node name="Coin4" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(1875, -186)
+
+[node name="Coin5" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(2021, -187)
+
+[node name="Coin6" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(2349, -177)
+
+[node name="Coin7" parent="Killzone" instance=ExtResource("3_1oiof")]
+position = Vector2(2897, -123)
 
 [node name="Player2" parent="." instance=ExtResource("8_so0bb")]
 position = Vector2(13, -1)

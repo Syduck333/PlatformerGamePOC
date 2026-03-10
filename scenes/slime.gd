@@ -9,7 +9,6 @@ var direction = 1
 @onready var ray_cast_right: RayCast2D = $"RayCast right"
 @onready var ray_cast_left: RayCast2D = $"RayCast left"
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var kick_area : Area2D = $KickArea
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

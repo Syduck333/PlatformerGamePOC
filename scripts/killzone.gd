@@ -2,8 +2,6 @@ extends Area2D
 class_name KillZone
 
 @onready var timer: Timer = $Timer
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var collision_shape_2d: CollisionShape2D = $KickArea/CollisionShape2D
 
 
 func _on_body_entered(body: Node2D) -> void:
