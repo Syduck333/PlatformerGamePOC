@@ -519,10 +519,10 @@ position = Vector2(772, 2)
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -167.0
-offset_top = -114.0
-offset_right = 59.0
-offset_bottom = 16.0
+offset_left = -94.0
+offset_top = -93.0
+offset_right = 132.0
+offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0.320859, 0.326061, 1)
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 16
