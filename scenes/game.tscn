@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bsi4ess6jxtar"]
+[gd_scene load_steps=22 format=3 uid="uid://bsi4ess6jxtar"]
 
 [ext_resource type="Script" uid="uid://d77v8qynend1" path="res://scenes/game_manager.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b5gexpi2klolc" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://yhms3dmv5e45" path="res://Assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 [ext_resource type="FontFile" uid="uid://6whc562ti60b" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://ceoeaeuq5dcec" path="res://scenes/Entrancelevel.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://73eyxc0whngt" path="res://scenes/player2.tscn" id="13_kvuet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -434,7 +435,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-37, -4)
+position = Vector2(-56, -6)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
@@ -518,28 +519,35 @@ position = Vector2(772, 2)
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -89.0
-offset_top = -86.0
-offset_right = 137.0
-offset_bottom = -21.0
+offset_left = -167.0
+offset_top = -114.0
+offset_right = 59.0
+offset_bottom = 16.0
 theme_override_colors/font_color = Color(0, 0.320859, 0.326061, 1)
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 16
-text = "Up Arrow = Jump
-Arrow Keys = Move
+text = "P1 - Arrow
+Keys and Space
+
+P2 - WASD and alt
+
+
 "
 
-[node name="Label" type="Label" parent="Labels/Label"]
-layout_mode = 0
-offset_left = 673.0
-offset_top = 38.0
-offset_right = 718.0
-offset_bottom = 58.0
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 184.0
+offset_top = -119.0
+offset_right = 470.0
+offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0.320859, 0.326061, 1)
 theme_override_fonts/font = ExtResource("8_gee14")
-theme_override_font_sizes/font_size = 8
-text = "Dont go
-down"
+theme_override_font_sizes/font_size = 16
+text = "Monsters are invading,
+fight them!
+
+
+
+"
 
 [node name="Label2" type="Label" parent="Labels"]
 offset_left = 1204.0
@@ -555,6 +563,17 @@ offset_right = 323.0
 offset_bottom = -62.0
 theme_override_font_sizes/font_size = 8
 text = "Dont hit them"
+
+[node name="Label5" type="Label" parent="Labels"]
+offset_left = 584.0
+offset_top = -73.0
+offset_right = 629.0
+offset_bottom = -53.0
+theme_override_colors/font_color = Color(0, 0.320859, 0.326061, 1)
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Dont fall
+down"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-44, 4)
@@ -580,3 +599,6 @@ shape = SubResource("RectangleShape2D_kvpfn")
 
 [node name="Coin" parent="." instance=ExtResource("4_lbhrr")]
 position = Vector2(-11, -9)
+
+[node name="Player2" parent="." instance=ExtResource("13_kvuet")]
+position = Vector2(27, -5)

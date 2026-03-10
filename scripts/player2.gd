@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("playertwoattack"):
 		is_attacking = true
-		animated_sprite.play("Attack_Kick")
+		animated_sprite.play("Attack_1")
 		var areas = kick_area.get_overlapping_bodies()
 		print(areas.size())
 		for area in areas:
@@ -44,11 +44,11 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor():
 			if direction == 0 and not is_attacking:
-				animated_sprite.play("Idle")
+				animated_sprite.play("Idle_1")
 			elif not is_attacking:
-				animated_sprite.play("Run")
+				animated_sprite.play("Run_1")
 	else:
-		animated_sprite.play("Jump")
+		animated_sprite.play("Jump_1")
 
 	#play anims
 
@@ -63,4 +63,4 @@ func _physics_process(delta: float) -> void:
 
 func _animation_finished() -> void:
 	is_attacking = false
-	animated_sprite.play("Idle")
+	animated_sprite.play("Idle_1")
