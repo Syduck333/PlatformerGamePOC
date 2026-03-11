@@ -8,7 +8,7 @@
 size = Vector2(11, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8pv"]
-size = Vector2(9, 34)
+size = Vector2(9, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l8pv"]
 atlas = ExtResource("2_pjw23")
@@ -148,7 +148,7 @@ debug_color = Color(0.731595, 0.232511, 1, 0.42)
 position = Vector2(2, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(5, 10)
+position = Vector2(5, 9)
 shape = SubResource("RectangleShape2D_0l8pv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
